@@ -1,0 +1,469 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    font-family: 'Bruno Ace', cursive;
+font-family: 'Poppins', sans-serif;
+margin: 0;
+padding: 0;
+scroll-padding-top: 2rem;
+scroll-behavior: smooth;
+box-sizing: border-box;
+list-style: none;
+text-decoration: none;
+
+
+}
+
+:root{
+    --main-color: #fd4646;
+    --text-color: #171427;
+    --bg-color: #fff;
+}
+
+img{
+    width:100%;
+}
+body{
+    color: var(--text-color);
+    
+}
+.container {
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+    
+}
+section{
+    padding: 4rem 0 3rem;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #000000 ;
+    border-bottom: 2px dotted rgb(102, 102, 97);
+    /* border-left: 1px dotted rgb(122, 179, 208);
+    border-right: 1px dotted rgb(122, 179, 208) ; */
+    border-bottom-left-radius: 10px 10px;
+    border-bottom-right-radius: 10px 10px;
+    
+    /* box-shadow: 0 10px 9px hsl(0 4% 15% / 10%); */
+    box-shadow: 10px 20px 20px -4px lightblue;
+    z-index: 100;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+    
+}
+.logo{
+    font-size: 1.7rem;
+    color: #fff;
+    font-weight: 400;
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #f4eded, 0 0 10px #ff8d00, 0 0 95px #fffbfb;
+    
+   
+    
+    
+    
+}
+
+
+#cart-icon{
+    font-size: 3rem;
+    cursor: pointer;
+   
+}
+#insta{
+    font-size: 2rem;
+    cursor: pointer; 
+}
+#facebook{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+#whats{
+    font-size: 2rem;
+    cursor: pointer;
+}
+.cor{
+    font-weight: 900;
+    color: #B22222;
+    font-size: 15px;
+    text-align: right;
+    
+
+}
+/* cart */
+.cart{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 360px;
+    min-height: 100vh;
+    padding: 20px;
+    background: var(--bg-color);
+    box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+    transition: 0.3s;
+}
+.cart.active{
+    right: 0;
+}
+.cart-title{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+.cart-box {
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.cart-img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 10px;
+}
+.detail-box{
+    display: grid;
+    row-gap: 0.5rem;
+}
+.cart-product-title{
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+.cart-price {
+    font-weight: 500;
+}
+.cart-quantity {
+    border: 1px solid var(--text-color);
+    outline-color: var(--main-color);
+    width: 2.4rem;
+    text-align: center;
+    font-size: 1rem;
+}
+.cart-remove {
+    font-size: 24px;
+    color: var(--main-color);
+    cursor: pointer;
+}
+.total {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--text-color);
+}
+.total-title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+.total-price{
+    margin-left: 0.5rem;
+}
+.btn-buy{
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    border: none;
+    background: var(--main-color);
+    color: var(--bg-color);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 15px;
+}
+.btn-buy:hover {
+    background: var(--text-color);
+}
+#close-cart {
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 3rem;
+    background-color: #bbd225;
+    color: #000000;
+    border-radius: 50px 20px;
+    box-shadow: 2px 2px 9px rgb(82, 73, 73);
+    
+    
+}
+.shop{
+    margin-top: 2rem;
+ }
+
+/*shot content*/
+.shop-content{
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(220px, auto));
+    gap: 1.5rem;
+}
+
+/* Product box limits and border */
+
+.product-box {
+    position: relative;
+    border-bottom: 2px solid green;
+    box-shadow: 7px 9px 1px rgb(161, 172, 161);
+    margin-top: 20px;
+}
+.product-box:hover{
+    padding: 10px;
+    border: 1px solid var(--text-color);
+    transition: 0.4s;
+}
+.product-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.product-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+.price {
+    font-weight: 500;
+    font-size: 24px;
+    color: var(--main-color);
+    margin-right: 100px;
+    text-decoration: 0.3px underline rgba(0, 0, 0, 0.983);
+    
+}
+
+.add-cart{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--text-color);
+    color: var(--bg-color);
+    padding: 10px;
+    cursor: pointer;
+    box-shadow:9px 9px 6px #1d07a8;
+}
+.add-cart:hover{
+background: hsl(249, 32%, 17%);
+}
+
+
+@media(max-width: 1080px) {
+    .nav{
+        padding: 15px;
+    }
+    section{
+        padding: 3rem 0 2rem;
+    }
+    .container{
+        margin: 0 auto;
+        width: 90%;
+    }
+    .shop {
+        margin-top: 2rem !important;
+    }
+}
+
+@media(max-width: 400px) {
+    .nav {
+        padding: 11px;
+    }
+    .logo {
+        font-size: 1rem;
+    }
+    .cart {
+        width: 320px;
+    }
+}
+
+@media(max-width: 360px) {
+    .shop {
+        margin-top: 1rem !important;
+    }
+    .cart {
+        width: 280px;
+    }
+}
+
+.imm{
+    background-color:#000000 ;
+    color: white;
+    border-radius: 20px; 
+    margin: 15px;
+    box-shadow: 4px 4px 3px rgb(90, 19, 19);
+    
+    
+}
+/* body background for the side page */
+
+
+
+
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ffc700;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+/* whatsApp button */
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.my-float{
+	margin-top:16px;
+}
+
+
+/* pay on delevary button */
+
+.button-24 {
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    border: none;
+    background: black;
+    color: var(--bg-color);
+    font-size: 1rem;
+    font-weight: 900;
+    cursor: pointer;
+    border-radius: 20px;
+    text-decoration: none;
+    
+}
+.button-24:hover{
+    background: var(--main-color);
+    color: black;
+    transition: 0.5s;
+}
+a:link{
+    text-decoration: none;
+}
+
+.button-25 {
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    border: none;
+    background: green;
+    color: var(--bg-color);
+    font-size: 1rem;
+    font-weight: 900;
+    cursor: pointer;
+    border-radius: 20px;
+    text-decoration: none;
+    
+}
+.button-25:hover{
+    background: var(--main-color);
+    color: black;
+    transition: 0.5s;
+}
+.logo{
+    font-weight: 900;
+}
+.section-title2{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 3rem;
+    background-color: #bbd225;
+    color: #000000;
+    border-radius: 50px 20px;
+    box-shadow: 2px 2px 20px rgb(42, 44, 37);
+    
+   
+}
+.sale {
+	position: relative;
+	display: inline-block;
+	background: orange;
+	color: white;
+	height: 50px;
+	width: 50px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 50px;
+	transform: rotate(-20deg);
+	animation: beat 1s ease infinite alternate;
+	&:before,
+	&:after {
+		content:"";
+		position: absolute;
+		background: inherit;
+		height: inherit;
+		width: inherit;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		transform: rotate(30deg);
+	}
+	&:after {
+		transform: rotate(60deg);
+	}
+}
+
+@keyframes beat {
+	from {	transform: rotate(-20deg) scale(0.9); }
+	to {	transform: rotate(-20deg) scale(1.2); }
+}
+
